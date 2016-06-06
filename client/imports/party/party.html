@@ -1,0 +1,19 @@
+<div class="party-container">
+  
+  <button (click)="deleteParty()">X</button>
+
+  <div class="party-basic-info" [hidden]="editing">
+    <div><label>Title: </label>{{party.title}}</div>
+    <div><label>Authors: </label>{{party.authors}}</div>
+    <div><label>URL: </label>{{party.url}}</div>
+    <button (click)="startEditing()">edit</button>
+  </div>
+
+  <edit-party
+    [hidden]="!editing"
+    [boundParty]="party"
+    (editSaved)="stopEditing()"
+    (editCancelled)="stopEditing()">
+  </edit-party>
+
+</div>

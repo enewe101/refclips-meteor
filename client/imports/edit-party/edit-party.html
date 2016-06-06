@@ -1,0 +1,18 @@
+<form [ngFormModel]="editForm" #f="ngForm">
+  <div>
+    <label>Title: </label>
+    <input type="text" ngControl="title">
+  </div>
+  <div>
+    <label>Authors: </label>
+    <input type="text" ngControl="authors">
+  </div>
+  <div>
+    <label>URL: </label>
+    <input type="text" ngControl="url">
+  </div>
+  <div>
+    <button (click)="save(f.value)">save</button>
+    <button (click)="cancel()">cancel</button>
+  </div>
+</form>

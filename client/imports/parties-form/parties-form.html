@@ -1,0 +1,10 @@
+<form [ngFormModel]="partiesForm" #f="ngForm" (submit)="addParty(f.value)">
+  <label>Title</label>
+  <input type="text" ngControl="title">
+  <label>Authors</label>
+  <input type="text" ngControl="authors">
+  <label>URL</label>
+  <input type="text" ngControl="url">
+  <button>Add</button>
+  {{f.value.toSource()}}
+</form>
